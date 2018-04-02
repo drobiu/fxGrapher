@@ -1,11 +1,12 @@
-int zoom = 10;
+float zoom = 20;
 float x = -500/zoom;
-float increment = 0.0005;
-
+float increment = 0.01/zoom;
+float y;
 
 void setup() {
   frameRate(144);
   translate(width/2, height/2);
+  
   size(1000, 1000);
   background(50);
   stroke(200,20,20,200);
@@ -24,34 +25,36 @@ void draw() {
     stroke(200,20,20,200);
     
     if (i != 0){
-      line(i*50,7,i*50,-7);
+      line(i*zoom,7,i*zoom,-7); //those are przedziałkas
+      line(7,i*zoom,-7,i*zoom);
+      
       textSize(10);
       fill(200,20,20,200);
-      text(int(i),(i*50),-11);
+      text(int(i),(i*zoom),-11); //numbers above (przedziałkas)
+      text(int(-i),10,(i*zoom));
     }
     println(i);
   }
   
-  for (float i = 5*x; i < 5*-x; i++){
-    stroke(200,20,20,200);
-    
-    if (i != 0){
-      line(7,i*50,-7,i*50);
-      textSize(10);
-      fill(200,20,20,200);
-      text(int(-i),10,(i*50));
-    }
-    println(i);
-  }
    
   for (float i = x; i < 500/zoom; i = i + increment){
-  
-    float y = abs(x);
+    
+//    Example functions:
+//    straight line
+//    y = x;
+ 
+//    x^2 curve
+//    y = x*x;
+
+//    an exponential function
+//    y = pow(3,x);
+ 
+y = -x*x*x - 2*x*x + 4*x -3;
     
     stroke(255,40);
-    point(x*zoom, -y*zoom*);
+    point(x*zoom, -y*zoom);
     println("x = " + x + "    y = " + y);
     x=x+increment;
+    
   }
-
 }
