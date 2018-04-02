@@ -2,6 +2,7 @@ int zoom = 10;
 float x = -500/zoom;
 float increment = 0.0005;
 
+
 void setup() {
   frameRate(144);
   translate(width/2, height/2);
@@ -44,9 +45,11 @@ void draw() {
   }
    
   for (float i = x; i < 500/zoom; i = i + increment){
+  
     float y = abs(x);
+    
     stroke(255,40);
-    point(x*zoom, -y*zoom*2);
+    point(x*zoom, -y*zoom*);
     println("x = " + x + "    y = " + y);
     x=x+increment;
   }
