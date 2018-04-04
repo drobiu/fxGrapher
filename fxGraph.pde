@@ -1,6 +1,6 @@
-float zoom = 20;
+float zoom = 20; //the bigger it is, the bigger the graph will be
 float x = -500/zoom;
-float increment = 0.01/zoom;
+float increment = 0.01/zoom; //the smaller the number, the more accurate it gets
 float y;
 
 void setup() {
@@ -52,7 +52,7 @@ void draw() {
 y = -x*x*x - 2*x*x + 4*x -3;
     
     stroke(255,40);
-    point(x*zoom, -y*zoom);
+    point(x*zoom, -y*zoom); //points that make up the graph
     println("x = " + x + "    y = " + y);
     x=x+increment;
     
