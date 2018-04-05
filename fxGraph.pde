@@ -4,7 +4,6 @@ float increment = 0.01/zoom; //the smaller the number, the more accurate it gets
 float y;
 
 void setup() {
-  frameRate(144);
   translate(width/2, height/2);
   
   size(1000, 1000);
