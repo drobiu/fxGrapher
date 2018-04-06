@@ -57,3 +57,8 @@ y = -x*x*x - 2*x*x + 4*x -3;
     
   }
 }
+
+void mouseWheel(MouseEvent event) {
+  float e = event.getCount();
+  println(e); //printing to see if it works
+}
