@@ -24,12 +24,12 @@ void draw() {
     stroke(200,20,20,200);
     
     if (i != 0){
-      line(i*zoom,7,i*zoom,-7); //those are przedziałkas
+      line(i*zoom,7,i*zoom,-7); //those are division marks
       line(7,i*zoom,-7,i*zoom);
       
       textSize(10);
       fill(200,20,20,200);
-      text(int(i),(i*zoom),-11); //numbers above (przedziałkas)
+      text(int(i),(i*zoom),-11); //numbers above division marks
       text(int(-i),10,(i*zoom));
     }
     println(i);
