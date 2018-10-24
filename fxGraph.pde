@@ -57,3 +57,9 @@ y = -x*x*x - 2*x*x + 4*x -3;
     
   }
 }
+
+void keyPressed(){
+  if (key == 'Q' || key == 'q'){
+    exit();
+  }
+}
